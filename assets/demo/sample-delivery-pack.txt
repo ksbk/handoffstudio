@@ -1,0 +1,4 @@
+Sample delivery demo pack placeholder
+
+This placeholder represents a downloadable demo bundle.
+Replace with a real archive before production launch.

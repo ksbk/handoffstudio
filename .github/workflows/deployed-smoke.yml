@@ -1,0 +1,43 @@
+name: deployed-smoke
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: "Deployed base URL to verify (e.g. https://studio.pages.dev)"
+        required: true
+        type: string
+  repository_dispatch:
+    types:
+      - deployed_smoke
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ github.event.inputs.base_url || github.event.client_payload.base_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate input
+        run: |
+          set -euo pipefail
+          if [ -z "${BASE_URL:-}" ]; then
+            echo "Missing BASE_URL input."
+            exit 1
+          fi
+          echo "Running deployed smoke checks for: ${BASE_URL}"
+
+      - name: Run deployed smoke
+        run: |
+          set -euo pipefail
+          bash scripts/smoke_deployed.sh "${BASE_URL}" | tee deployed-smoke.log
+
+      - name: Upload smoke log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployed-smoke-log
+          if-no-files-found: warn
+          path: deployed-smoke.log

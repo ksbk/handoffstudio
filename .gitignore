@@ -1,0 +1,6 @@
+.DS_Store
+.preview/
+.mypy_cache/
+node_modules/
+dist/
+tests/artifacts/

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 208" role="img" aria-labelledby="title desc">
+  <title id="title">Handoff notes markdown thumbnail</title>
+  <desc id="desc">Synthetic documentation preview for handoff notes.</desc>
+  <rect x="6" y="8" width="308" height="192" rx="14" fill="rgba(20,27,36,0.95)" stroke="rgba(184,195,211,0.28)"/>
+  <rect x="22" y="28" width="276" height="24" rx="6" fill="rgba(214,171,91,0.2)"/>
+  <text x="34" y="44" font-family="Manrope,Segoe UI,sans-serif" font-size="12" fill="#f7e5bc">handoff_notes.md</text>
+  <text x="30" y="78" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#c8d6ea">## Delivery Summary</text>
+  <text x="30" y="100" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#c8d6ea">- Scope: approved</text>
+  <text x="30" y="122" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#c8d6ea">- Validation: complete</text>
+  <text x="30" y="144" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#c8d6ea">- Next run: documented</text>
+</svg>

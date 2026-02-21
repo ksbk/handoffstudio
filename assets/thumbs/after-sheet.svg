@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 208" role="img" aria-labelledby="title desc">
+  <title id="title">After spreadsheet state</title>
+  <desc id="desc">Synthetic clean sheet with normalized rows and check marks.</desc>
+  <rect x="6" y="8" width="308" height="192" rx="14" fill="rgba(20,27,36,0.95)" stroke="rgba(184,195,211,0.28)"/>
+  <rect x="22" y="28" width="276" height="24" rx="6" fill="rgba(125,157,211,0.24)"/>
+  <text x="34" y="44" font-family="Manrope,Segoe UI,sans-serif" font-size="12" fill="#d6e6ff">After</text>
+  <rect x="22" y="70" width="276" height="18" rx="4" fill="rgba(102,176,129,0.18)"/>
+  <rect x="22" y="96" width="276" height="18" rx="4" fill="rgba(102,176,129,0.18)"/>
+  <rect x="22" y="122" width="276" height="18" rx="4" fill="rgba(102,176,129,0.18)"/>
+  <path d="M34 79l4 4 6-7M34 105l4 4 6-7M34 131l4 4 6-7" fill="none" stroke="#d6ab5b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

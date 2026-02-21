@@ -1,0 +1,22 @@
+{
+  "name": "Handoff Studio",
+  "short_name": "Handoff",
+  "description": "Clean, reliable fixes delivered fast.",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "64x64"
+    },
+    {
+      "src": "apple-touch-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "180x180"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#0f1217",
+  "background_color": "#0f1217",
+  "display": "standalone"
+}
