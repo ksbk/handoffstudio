@@ -1,0 +1,31 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "Conversion-focused service studio website built as a static multi-page site for fast launch on Cloudflare Pages.",
+  "main": "src/js/app.js",
+  "scripts": {
+    "build": "node scripts/build_static_site.cjs",
+    "sync:seo": "node scripts/sync_meta_from_config.cjs",
+    "check:syntax": "for f in $(find src/js -type f -name '*.js' | sort); do node --check \"$f\"; done && node --check scripts/*.cjs",
+    "lint": "npm run check:syntax",
+    "test": "python3 scripts/smoke_test_site.py",
+    "test:e2e": "node scripts/final_launch_checks.cjs",
+    "check:assets": "node scripts/check_asset_refs.cjs dist",
+    "check:placeholders": "python3 scripts/check_no_placeholders.py",
+    "screenshots": "node scripts/capture_screenshots.cjs",
+    "gate:predeploy": "node scripts/predeploy_gate.cjs",
+    "smoke:deployed": "bash scripts/smoke_deployed.sh",
+    "smoke:redirects": "bash scripts/smoke_deployed.sh --redirect-only",
+    "screenshots:install": "npx playwright install chromium",
+    "svgo": "if command -v svgo >/dev/null 2>&1; then svgo --folder src/assets --recursive --multipass; else echo 'svgo not installed. Install svgo (npm i -D svgo) and run npm run svgo.'; fi",
+    "check": "make check",
+    "dev": "npm run build && python3 -m http.server 8080 --directory dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "playwright": "^1.58.2"
+  }
+}

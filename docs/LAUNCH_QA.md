@@ -1,6 +1,6 @@
 # Launch QA Report
 
-Date: 2026-02-18  
+Date: 2026-02-18
 Repo: `/Users/ksb/dev/mysite`
 
 ## Scope
@@ -66,7 +66,7 @@ Covered and passing:
 ## Fixes applied during this pass
 
 ### Fix 1: Dist-based asset integrity validation
-File: `/Users/ksb/dev/mysite/scripts/check_asset_refs.cjs`
+File: `/Users/ksb/dev/mysite/apps/web/scripts/check_asset_refs.cjs`
 
 ```diff
 @@
@@ -95,7 +95,7 @@ File: `/Users/ksb/dev/mysite/scripts/check_asset_refs.cjs`
 ```
 
 ### Fix 2: Ensure `check:assets` targets dist
-File: `/Users/ksb/dev/mysite/package.json`
+File: `/Users/ksb/dev/mysite/apps/web/package.json`
 
 ```diff
 @@
@@ -104,7 +104,7 @@ File: `/Users/ksb/dev/mysite/package.json`
 ```
 
 ### Fix 3: Tighten E2E to match launch criteria
-File: `/Users/ksb/dev/mysite/scripts/final_launch_checks.cjs`
+File: `/Users/ksb/dev/mysite/apps/web/scripts/final_launch_checks.cjs`
 
 ```diff
 @@
@@ -134,8 +134,8 @@ File: `/Users/ksb/dev/mysite/scripts/final_launch_checks.cjs`
 
 ### Fix 4: Add deterministic pre-deploy gate (double E2E + dist headers)
 Files:
-- `/Users/ksb/dev/mysite/scripts/predeploy_gate.cjs`
-- `/Users/ksb/dev/mysite/package.json`
+- `/Users/ksb/dev/mysite/apps/web/scripts/predeploy_gate.cjs`
+- `/Users/ksb/dev/mysite/apps/web/package.json`
 
 ```diff
 @@
@@ -144,8 +144,8 @@ Files:
 
 ### Fix 5: Add deployed curl smoke script for production URL checks
 Files:
-- `/Users/ksb/dev/mysite/scripts/smoke_deployed.sh`
-- `/Users/ksb/dev/mysite/package.json`
+- `/Users/ksb/dev/mysite/apps/web/scripts/smoke_deployed.sh`
+- `/Users/ksb/dev/mysite/apps/web/package.json`
 
 ```diff
 @@
@@ -171,8 +171,8 @@ File: `/Users/ksb/dev/mysite/.github/workflows/ci.yml`
 
 ### Fix 7: Add predeploy gate for `dist/_headers` + double E2E
 Files:
-- `/Users/ksb/dev/mysite/scripts/predeploy_gate.cjs`
-- `/Users/ksb/dev/mysite/package.json`
+- `/Users/ksb/dev/mysite/apps/web/scripts/predeploy_gate.cjs`
+- `/Users/ksb/dev/mysite/apps/web/package.json`
 
 ```diff
 @@
@@ -181,8 +181,8 @@ Files:
 
 ### Fix 8: Add deployed smoke checker (curl-based)
 Files:
-- `/Users/ksb/dev/mysite/scripts/smoke_deployed.sh`
-- `/Users/ksb/dev/mysite/package.json`
+- `/Users/ksb/dev/mysite/apps/web/scripts/smoke_deployed.sh`
+- `/Users/ksb/dev/mysite/apps/web/package.json`
 
 ```diff
 @@
@@ -190,7 +190,7 @@ Files:
 ```
 
 ### Fix 9: Make deployed smoke redirect-safe and final-header strict
-File: `/Users/ksb/dev/mysite/scripts/smoke_deployed.sh`
+File: `/Users/ksb/dev/mysite/apps/web/scripts/smoke_deployed.sh`
 
 ```diff
 @@
@@ -221,19 +221,19 @@ File: `/Users/ksb/dev/mysite/.github/workflows/deployed-smoke.yml`
 
 ## Artifact paths
 - E2E responsive artifacts:
-  - `/Users/ksb/dev/mysite/tests/artifacts/home-375x812.png`
-  - `/Users/ksb/dev/mysite/tests/artifacts/home-768x1024.png`
-  - `/Users/ksb/dev/mysite/tests/artifacts/home-1280x800.png`
-  - `/Users/ksb/dev/mysite/tests/artifacts/home-1440x900.png`
+  - `/Users/ksb/dev/mysite/apps/web/tests/artifacts/home-375x812.png`
+  - `/Users/ksb/dev/mysite/apps/web/tests/artifacts/home-768x1024.png`
+  - `/Users/ksb/dev/mysite/apps/web/tests/artifacts/home-1280x800.png`
+  - `/Users/ksb/dev/mysite/apps/web/tests/artifacts/home-1440x900.png`
 - Full-page preview set:
-  - `/Users/ksb/dev/mysite/.preview/index.html.png`
-  - `/Users/ksb/dev/mysite/.preview/services.html.png`
-  - `/Users/ksb/dev/mysite/.preview/process.html.png`
-  - `/Users/ksb/dev/mysite/.preview/contact.html.png`
-  - `/Users/ksb/dev/mysite/.preview/file-sharing.html.png`
-  - `/Users/ksb/dev/mysite/.preview/sample-delivery.html.png`
-  - `/Users/ksb/dev/mysite/.preview/terms.html.png`
-  - `/Users/ksb/dev/mysite/.preview/404.html.png`
+  - `/Users/ksb/dev/mysite/apps/web/.preview/index.html.png`
+  - `/Users/ksb/dev/mysite/apps/web/.preview/services.html.png`
+  - `/Users/ksb/dev/mysite/apps/web/.preview/process.html.png`
+  - `/Users/ksb/dev/mysite/apps/web/.preview/contact.html.png`
+  - `/Users/ksb/dev/mysite/apps/web/.preview/file-sharing.html.png`
+  - `/Users/ksb/dev/mysite/apps/web/.preview/sample-delivery.html.png`
+  - `/Users/ksb/dev/mysite/apps/web/.preview/terms.html.png`
+  - `/Users/ksb/dev/mysite/apps/web/.preview/404.html.png`
 
 ## Command log summary
 | Command | Result |

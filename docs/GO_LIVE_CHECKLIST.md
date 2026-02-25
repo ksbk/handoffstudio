@@ -16,8 +16,8 @@ curl -sSIL https://www.handoffstudio.com | sed -n '1,30p'
 - [ ] `sitemap.xml` is reachable and contains only `https://handoffstudio.com/...` URLs.
 
 Files:
-- `/Users/ksb/dev/mysite/robots.txt`
-- `/Users/ksb/dev/mysite/sitemap.xml`
+- `/Users/ksb/dev/mysite/apps/web/public/robots.txt`
+- `/Users/ksb/dev/mysite/apps/web/public/sitemap.xml`
 
 Commands:
 ```bash
@@ -31,8 +31,8 @@ curl -sS https://handoffstudio.com/sitemap.xml | rg "handoffstudio.com"
 - [ ] "Copy intake template" button works.
 
 Files (source of truth):
-- `/Users/ksb/dev/mysite/site-config.json` (`intake.emailTo`, `intake.emailSubject`, `intake.emailBodyTemplate`)
-- `/Users/ksb/dev/mysite/contact.html` (`data-intake-link`, `data-intake-template`)
+- `/Users/ksb/dev/mysite/apps/web/src/site-config.json` (`intake.emailTo`, `intake.emailSubject`, `intake.emailBodyTemplate`)
+- `/Users/ksb/dev/mysite/apps/web/src/pages/contact.html` (`data-intake-link`, `data-intake-template`)
 
 ## 4) Payment Links Visible + Correct
 - [ ] `site-config.json` has real payment URLs (no placeholders).
@@ -40,14 +40,14 @@ Files (source of truth):
 - [ ] Links open correct checkout pages.
 
 Files:
-- `/Users/ksb/dev/mysite/site-config.json` (`payments.methods[*].url`)
-- `/Users/ksb/dev/mysite/index.html` (`data-payments`)
-- `/Users/ksb/dev/mysite/services.html` (`data-payments`)
-- `/Users/ksb/dev/mysite/contact.html` (`data-payments`)
+- `/Users/ksb/dev/mysite/apps/web/src/site-config.json` (`payments.methods[*].url`)
+- `/Users/ksb/dev/mysite/apps/web/src/pages/index.html` (`data-payments`)
+- `/Users/ksb/dev/mysite/apps/web/src/pages/services.html` (`data-payments`)
+- `/Users/ksb/dev/mysite/apps/web/src/pages/contact.html` (`data-payments`)
 
 Commands:
 ```bash
-rg -n "PAYMENT_LINK_" /Users/ksb/dev/mysite/site-config.json /Users/ksb/dev/mysite/dist/site-config.json
+rg -n "PAYMENT_LINK_" /Users/ksb/dev/mysite/apps/web/src/site-config.json /Users/ksb/dev/mysite/apps/web/dist/site-config.json
 ```
 Expected: no matches.
 
@@ -57,7 +57,7 @@ Expected: no matches.
 
 Commands:
 ```bash
-cd /Users/ksb/dev/mysite
+cd /Users/ksb/dev/mysite/apps/web
 npm run build && make check
 npm run smoke:deployed -- https://handoffstudio.com
 ```

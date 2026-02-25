@@ -4,9 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       base_url:
-        description: "Deployed base URL to verify (e.g. https://studio.pages.dev)"
+        description: "Deployed base URL to verify (default: https://handoffstudio.com)"
         required: true
         type: string
+        default: https://handoffstudio.com
   repository_dispatch:
     types:
       - deployed_smoke
@@ -15,7 +16,7 @@ jobs:
   smoke:
     runs-on: ubuntu-latest
     env:
-      BASE_URL: ${{ github.event.inputs.base_url || github.event.client_payload.base_url }}
+      BASE_URL: ${{ github.event.inputs.base_url || github.event.client_payload.base_url || 'https://handoffstudio.com' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,12 +28,16 @@ jobs:
             echo "Missing BASE_URL input."
             exit 1
           fi
+          if [[ "${BASE_URL}" == *"pages.dev"* ]]; then
+            echo "Refusing pages.dev smoke target. Use production host https://handoffstudio.com"
+            exit 1
+          fi
           echo "Running deployed smoke checks for: ${BASE_URL}"
 
       - name: Run deployed smoke
         run: |
           set -euo pipefail
-          bash scripts/smoke_deployed.sh "${BASE_URL}" | tee deployed-smoke.log
+          bash apps/web/scripts/smoke_deployed.sh "${BASE_URL}" | tee deployed-smoke.log
 
       - name: Upload smoke log
         if: always()

@@ -1,0 +1,505 @@
+{
+  "config": {
+    "schemaVersion": "1.0",
+    "updatedAt": "2026-02-18",
+    "source": "single-file"
+  },
+  "site": {
+    "baseUrl": "https://handoffstudio.com",
+    "basePath": "/",
+    "socialImage": "/social-preview.png",
+    "themeColor": "#0f1217"
+  },
+  "brand": {
+    "id": "handoff-studio",
+    "name": "Handoff Studio",
+    "brandShort": "Handoff",
+    "tagline": "Reliable fixes for data, automation, and web/app issues.",
+    "email": "hello@handoffstudio.com"
+  },
+  "nav": [
+    "home",
+    "services",
+    "process",
+    "contact"
+  ],
+  "pages": {
+    "home": {
+      "path": "index.html",
+      "navLabel": "Home",
+      "title": "Handoff Studio | Fast Technical Delivery",
+      "description": "Premium service studio for data rescue, automation, and fast web/app repairs.",
+      "canonical": "https://handoffstudio.com/",
+      "ogTitle": "Handoff Studio | Fast Technical Delivery",
+      "ogDescription": "Clean, reliable fixes delivered fast for data, automation, and web/app repairs."
+    },
+    "services": {
+      "path": "services.html",
+      "navLabel": "Services",
+      "title": "Services | Handoff Studio",
+      "description": "Productized service packages with clear scope boundaries and turnaround.",
+      "canonical": "https://handoffstudio.com/services.html",
+      "ogTitle": "Services | Handoff Studio",
+      "ogDescription": "Short offers with clear scope boundaries and predictable turnaround."
+    },
+    "process": {
+      "path": "process.html",
+      "navLabel": "Process",
+      "title": "Process | Handoff Studio",
+      "description": "3-step workflow: Send, Plan, Deliver.",
+      "canonical": "https://handoffstudio.com/process.html",
+      "ogTitle": "Process | Handoff Studio",
+      "ogDescription": "Simple 3-step process with clear scope and handoff."
+    },
+    "contact": {
+      "path": "contact.html",
+      "navLabel": "Contact",
+      "title": "Contact | Handoff Studio",
+      "description": "Send your request through intake or email. Privacy-first service workflow.",
+      "canonical": "https://handoffstudio.com/contact.html",
+      "ogTitle": "Contact | Handoff Studio",
+      "ogDescription": "Send your request through intake. Email fallback and privacy-by-design notes included."
+    },
+    "sampleDelivery": {
+      "path": "sample-delivery.html",
+      "navLabel": "Sample Delivery",
+      "title": "Sample Delivery | Handoff Studio",
+      "description": "Synthetic sample delivery showing before/after changes, change log, and final handoff package.",
+      "canonical": "https://handoffstudio.com/sample-delivery.html",
+      "ogTitle": "Sample Delivery | Handoff Studio",
+      "ogDescription": "See a synthetic sample of what gets delivered: fixes, change log, and handoff notes."
+    },
+    "notFound": {
+      "path": "404.html",
+      "title": "Page Not Found | Handoff Studio",
+      "description": "The page could not be found. Return to services or contact to submit a request.",
+      "canonical": "https://handoffstudio.com/404.html",
+      "ogTitle": "Page Not Found | Handoff Studio",
+      "ogDescription": "Return to services or contact to continue."
+    },
+    "fileSharing": {
+      "path": "file-sharing.html",
+      "title": "File Sharing Guide | Handoff Studio",
+      "description": "How to send files safely with share links, permissions, and privacy checks.",
+      "canonical": "https://handoffstudio.com/file-sharing.html",
+      "ogTitle": "File Sharing Guide | Handoff Studio",
+      "ogDescription": "Quick instructions for safe, reliable file sharing before project intake."
+    },
+    "terms": {
+      "path": "terms.html",
+      "title": "Terms | Handoff Studio",
+      "description": "Basic service terms for scope boundaries, delivery expectations, and client responsibilities.",
+      "canonical": "https://handoffstudio.com/terms.html",
+      "ogTitle": "Terms | Handoff Studio",
+      "ogDescription": "Review baseline service terms for requests, delivery, and accepted usage."
+    }
+  },
+  "intake": {
+    "emailTo": "hello@handoffstudio.com",
+    "emailSubject": "Handoff request — Spreadsheet rescue",
+    "emailBodyTemplate": "File link:\nTool (Excel/Google Sheets):\nWhat is broken:\nDesired output:\nDeadline + timezone:\nConstraints:",
+    "checklist": [
+      "File link (Drive/Dropbox/Git)",
+      "Tool: Excel or Google Sheets",
+      "What is broken and why it blocks work",
+      "Desired output and acceptance criteria",
+      "Deadline + timezone",
+      "Constraints (must keep formulas, naming, etc.)"
+    ]
+  },
+  "payments": {
+    "enabled": true,
+    "heading": "Pay to start",
+    "note": "If I can't fix it, you don't pay.",
+    "methods": [
+      {
+        "label": "Quick Fix — $49",
+        "price": 49,
+        "url": "https://PAYMENT_LINK_49",
+        "blurb": "Best for one urgent blocker that needs a same-day fix.",
+        "promise": "Triage and fix on one focused issue.",
+        "includes": [
+          "Formula or import error diagnosis",
+          "Patched file with validation notes",
+          "Execution summary in handoff notes"
+        ],
+        "ctaLabel": "Start Quick Fix"
+      },
+      {
+        "label": "Standard Rescue — $149",
+        "price": 149,
+        "url": "https://PAYMENT_LINK_149",
+        "blurb": "Best for messy sheets, repeated errors, or partial rebuilds.",
+        "promise": "Structured rescue with clean output and run-ready notes.",
+        "includes": [
+          "Data cleanup + formula stabilization",
+          "QC checklist output",
+          "Handoff notes for repeat execution"
+        ],
+        "ctaLabel": "Start Standard Rescue"
+      },
+      {
+        "label": "Day Rate — $399",
+        "price": 399,
+        "url": "https://PAYMENT_LINK_399",
+        "blurb": "Best for multi-step rescue where several blockers are linked.",
+        "promise": "Full-day coverage with scope checkpoints and delivery bundle.",
+        "includes": [
+          "Priority triage and fix sequencing",
+          "Multiple deliverables in one package",
+          "Rollback-safe notes where relevant"
+        ],
+        "ctaLabel": "Start Day Rate"
+      }
+    ]
+  },
+  "sla": {
+    "enabled": true,
+    "title": "Fast response",
+    "items": [
+      "Reply within 15 minutes (09:00–21:00 GMT)",
+      "Same-day delivery for most spreadsheet rescues",
+      "Clear scope + fixed price before I start",
+      "If unsolvable, you pay $0"
+    ]
+  },
+  "conversion": {
+    "ctaLabel": "Send your request",
+    "intake": {
+      "primaryUrl": "/contact.html",
+      "fallbackEmail": "hello@handoffstudio.com"
+    },
+    "intakeHelper": "No sales call required. Send scope + deadline and get a confirmed scope boundary before work starts.",
+    "credibilityAnchor": "Triage reply within 1 business day · Fixed quote after triage · Written scope boundary · Secure file workflow · NDA available",
+    "riskReversal": [
+      "Clear scope before work starts",
+      "Clear turnaround window and handoff format",
+      "No hidden add-ons or vague deliverables"
+    ],
+    "heroOutcomes": [
+      "Fixed within 24\u201348h",
+      "QC checklist included",
+      "Scope locked before work"
+    ]
+  },
+  "heroVariantDefault": "a",
+  "heroVariants": {
+      "a": {
+        "headline": "Technical blockers fixed and handed off clean.",
+        "subhead": "Send scope + deadline. Get a QC-reviewed fix with handoff notes — no retainers, no calls.",
+        "cta": "Send your request",
+        "trustLine": "Triage reply within 1 business day · Fixed quote after triage · Written scope boundary · Secure file workflow · NDA available"
+      },
+      "b": {
+        "headline": "Your technical problem, fixed and delivered with written scope.",
+        "subhead": "No sales call required. Send scope + deadline and receive a written scope boundary before execution.",
+        "cta": "Start your request",
+        "trustLine": "Response within 1 business day · Fixed quote after triage · Scope locked before work · Secure file workflow · NDA available"
+      }
+  },
+  "offers": [
+    {
+      "name": "Spreadsheet/Data Rescue",
+      "summary": "Fix formulas, normalize exports, and return analysis-ready files fast.",
+      "turnaround": "24-48h",
+      "typicalOutput": "Clean workbook + validation notes",
+      "includes": [
+        "Formula repair and validation",
+        "Data cleanup and normalization",
+        "Before/after change notes"
+      ],
+      "scopeBoundary": "Best for targeted rescue tasks, not full BI platform migrations."
+    },
+    {
+      "name": "Automation",
+      "summary": "Replace recurring manual work with repeatable scripts, checks, and run notes.",
+      "turnaround": "2-5 days",
+      "typicalOutput": "Script bundle + runbook",
+      "includes": [
+        "Scripted workflow setup",
+        "Failure-safe checks",
+        "Runbook for future use"
+      ],
+      "scopeBoundary": "Best for repeatable workflows, not enterprise orchestration redesigns."
+    },
+    {
+      "name": "Web/App Fast Lane",
+      "summary": "Stabilize urgent Django/FastAPI bugs and deploy paths when deadlines are tight.",
+      "turnaround": "Same-day triage",
+      "typicalOutput": "Patch + deploy checklist",
+      "includes": [
+        "Issue isolation and fix plan",
+        "Patch + verification steps",
+        "Deployment and rollback notes"
+      ],
+      "scopeBoundary": "Best for urgent fixes, not full product rewrites."
+    }
+  ],
+  "packages": [
+    {
+      "name": "Rescue Sprint",
+      "priceRange": "$300-$900",
+      "turnaround": "24-48h",
+      "bestFor": "Spreadsheet cleanup, formula fixes, and urgent report recovery.",
+      "includes": [
+        "Fixed file",
+        "Validation checklist",
+        "Short handoff notes"
+      ]
+    },
+    {
+      "name": "Automation Build",
+      "priceRange": "$800-$2,500",
+      "turnaround": "2-5 days",
+      "bestFor": "Replacing repetitive ops with scripts and clear runbooks.",
+      "includes": [
+        "Automation scripts",
+        "Failure-safe checks",
+        "Runbook and revision window"
+      ]
+    },
+    {
+      "name": "Fast Lane Incident",
+      "priceRange": "$500-$1,800",
+      "turnaround": "Same day triage",
+      "bestFor": "Django/FastAPI production issue stabilization.",
+      "includes": [
+        "Issue isolation",
+        "Patch and verification",
+        "Rollback-safe notes"
+      ]
+    }
+  ],
+  "process": [
+    {
+      "title": "Send",
+      "description": "You submit scope, context files, and exact deadline."
+    },
+    {
+      "title": "Fix",
+      "description": "You receive fit confirmation, scope boundary, and execution updates."
+    },
+    {
+      "title": "Deliver",
+      "description": "You receive the fix bundle, QC summary, and handoff run notes."
+    }
+  ],
+  "proof": [
+    {
+      "title": "Spreadsheet recovery",
+      "before": "Inconsistent formats, broken formulas, and manual monthly totals.",
+      "after": "Normalized structure, validated formulas, and a clean reporting tab.",
+      "deliveryNote": "Validation checks, assumptions, and next-run instructions.",
+      "impact": "Manual steps: 12 -> 1"
+    },
+    {
+      "title": "Deploy incident fix",
+      "before": "Django app failing after dependency drift and env mismatch.",
+      "after": "Pinned dependencies, corrected config, and green health checks.",
+      "deliveryNote": "Patch summary, rollback path, and post-deploy checklist.",
+      "impact": "Recovery time: 3h/week -> 15m/week"
+    }
+  ],
+  "visuals": {
+    "trustStrip": {
+      "items": [
+        {
+          "label": "Same-day starts when scope is clear",
+          "icon": "/assets/icons/trust-no-call.svg"
+        },
+        {
+          "label": "Clear scope before execution",
+          "icon": "/assets/icons/trust-scope.svg"
+        },
+        {
+          "label": "QC-reviewed handoff package",
+          "icon": "/assets/icons/trust-qc.svg"
+        },
+        {
+          "label": "Privacy-first file handling",
+          "icon": "/assets/icons/trust-privacy.svg"
+        },
+        {
+          "label": "$0 if not fixed",
+          "icon": "/assets/icons/trust-nda.svg"
+        }
+      ]
+    },
+    "heroVisual": {
+      "kicker": "Before and after",
+      "caption": "Illustrative (synthetic): cleanup snapshots show unstable inputs transformed into validated, handoff-ready outputs.",
+      "items": [
+        {
+          "label": "Before",
+          "image": "/assets/thumbs/before-sheet.svg",
+          "alt": "Synthetic preview of a pre-fix spreadsheet with inconsistent formatting and unstable formulas"
+        },
+        {
+          "label": "After",
+          "image": "/assets/thumbs/after-sheet.svg",
+          "alt": "Synthetic preview of a cleaned spreadsheet with normalized structure and validated calculations"
+        }
+      ]
+    },
+    "heroDeliverables": {
+      "kicker": "Delivery artifacts",
+      "items": [
+        "Final_Report.xlsx with normalized formulas",
+        "qc.json checklist output",
+        "handoff_notes.md with run steps"
+      ]
+    },
+    "commonFixes": {
+      "items": [
+        {
+          "title": "Formula failures",
+          "description": "Fix #REF, circular references, and unstable nested lookups.",
+          "icon": "/assets/icons/fix-formulas.svg"
+        },
+        {
+          "title": "Messy imports",
+          "description": "Normalize CSV/XLSX exports and map columns for reliable reporting.",
+          "icon": "/assets/icons/fix-imports.svg"
+        },
+        {
+          "title": "Broken automation",
+          "description": "Restore scripts, cron jobs, and handoff-safe run steps.",
+          "icon": "/assets/icons/fix-automation.svg"
+        },
+        {
+          "title": "Deploy breakages",
+          "description": "Patch Django/FastAPI incidents and ship rollback-safe notes.",
+          "icon": "/assets/icons/fix-deploy.svg"
+        }
+      ]
+    },
+    "deliverablesGallery": {
+      "services": [
+        {
+          "title": "Final report file",
+          "image": "/assets/thumbs/final-report.svg",
+          "alt": "Synthetic preview of a cleaned report workbook ready for handoff",
+          "caption": "Final_Report.xlsx with validated totals and locked formulas."
+        },
+        {
+          "title": "QC summary",
+          "image": "/assets/thumbs/qc-json.svg",
+          "alt": "Synthetic preview of QC summary output in JSON format",
+          "caption": "qc.json capturing checks, assumptions, and pass/fail markers."
+        },
+        {
+          "title": "Handoff notes",
+          "image": "/assets/thumbs/handoff-notes.svg",
+          "alt": "Synthetic preview of markdown handoff notes with execution steps",
+          "caption": "handoff_notes.md with run steps and rollback guidance."
+        }
+      ],
+      "sampleDelivery": [
+        {
+          "title": "Before sheet snapshot",
+          "image": "/assets/thumbs/before-sheet.svg",
+          "alt": "Synthetic preview of pre-fix spreadsheet state with inconsistent rows",
+          "caption": "Before: unstable formulas and inconsistent import formatting."
+        },
+        {
+          "title": "After sheet snapshot",
+          "image": "/assets/thumbs/after-sheet.svg",
+          "alt": "Synthetic preview of post-fix spreadsheet state with validated outputs",
+          "caption": "After: normalized structure and validated output checks."
+        },
+        {
+          "title": "QC summary",
+          "image": "/assets/thumbs/qc-json.svg",
+          "alt": "Synthetic preview of QC summary output in JSON format",
+          "caption": "QC summary: checklist output attached to the delivery bundle."
+        }
+      ]
+    }
+  },
+  "deliveryBundle": {
+    "kicker": "Example delivery bundle",
+    "title": "Delivery bundle preview",
+    "items": [
+      {
+        "name": "Final_Report.xlsx",
+        "status": "READY"
+      },
+      {
+        "name": "qc.json",
+        "status": "PASSED"
+      },
+      {
+        "name": "manifest.json",
+        "status": "QC OK"
+      },
+      {
+        "name": "handoff_notes.md",
+        "status": "INCLUDED"
+      }
+    ],
+    "metrics": {
+      "turnaround": "24–48h",
+      "qcChecks": 24,
+      "handoff": "included",
+      "note": "Status tags reflect QC review checks."
+    },
+    "qcChecklist": [
+      "Input schema and file-integrity checks",
+      "Formula dependency audit and reference stability",
+      "Duplicate and null-value detection",
+      "Date/time normalization and timezone sanity checks",
+      "Data type consistency checks",
+      "Output shape validation against requested format",
+      "Regression check against pre-fix baseline",
+      "Edge-case sampling on critical rows",
+      "Runbook steps validated end-to-end",
+      "Handoff notes completeness check"
+    ]
+  },
+  "sampleDelivery": {
+    "title": "Sample delivery package (synthetic)",
+    "scenario": "Client had a broken monthly operations workbook and needed a reliable report before Monday 9:00 AM ET.",
+    "before": [
+      "Mixed date formats and duplicate rows across exports",
+      "Broken nested formulas in KPI tabs",
+      "Manual copy/paste steps every week"
+    ],
+    "after": [
+      "Normalized import sheet with validation checks",
+      "Rebuilt formulas with clear named ranges",
+      "One-click script for recurring weekly updates"
+    ],
+    "changeLog": [
+      "Replaced volatile formulas with stable references",
+      "Added duplicate detection and date normalization",
+      "Documented assumptions and edge cases"
+    ],
+    "clientReceives": [
+      "Fixed deliverable files",
+      "Change log and validation notes",
+      "Runbook for repeat execution"
+    ]
+  },
+  "privacy": {
+    "note": "Public website uses brand identity only. Personal identity is kept off-site except where legally required.",
+    "metadataHygiene": "Deliverables follow metadata hygiene to reduce accidental author-information leaks."
+  },
+  "faq": [
+    {
+      "question": "What files should I send first?",
+      "answer": "Start with one representative file, expected output, and a short summary of what is broken."
+    },
+    {
+      "question": "How fast can you start?",
+      "answer": "Most requests are triaged the same day, with clear turnaround windows before work begins."
+    },
+    {
+      "question": "Do you sign NDAs?",
+      "answer": "Yes, NDA review can be included in intake before any execution work starts."
+    },
+    {
+      "question": "How should I share sensitive files?",
+      "answer": "Use restricted share links and minimum permissions. See the file-sharing guide for exact steps."
+    }
+  ]
+}
